@@ -1,0 +1,1 @@
+import{openDatabase}from"./db";import{seed}from"./auth";import{createApp}from"./app";const db=openDatabase();seed(db);const port=Number(process.env.PORT??3000);createApp(db).listen(port,"0.0.0.0",()=>console.log(`Reservation API listening on ${port}`));
